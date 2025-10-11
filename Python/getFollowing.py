@@ -28,7 +28,7 @@ def get_following():
 
     for user_temp in following_temp:
         three_first = user_temp[:3]
-        if three_first not in month_abb:
+        if three_first not in month_abb and not user_temp.startswith("http"): #check for error
             user_temp += '\n'
             following.append(user_temp)
     print(f"Number of Following: {len(following)}")
