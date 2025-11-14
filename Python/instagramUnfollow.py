@@ -12,7 +12,10 @@ import getFollowing
 non_follower = getFollowing.get_data()  # this should setup the files
 
 def unfollow(username):
-    url = f"https://www.instagram.com/{username}/"
+    if("/" in username):
+        url = username
+    else:
+        url = f"https://www.instagram.com/{username}/"
     webbrowser.open(url)
     sleep(8)
     os.system("taskkill /F /IM msedge.exe")  # for windows
@@ -30,3 +33,5 @@ for user in non_follower:
         error_list.append(user)
 
 print(error_list)
+
+print("Done")
