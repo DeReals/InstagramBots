@@ -17,8 +17,8 @@ def unfollow(username):
     else:
         url = f"https://www.instagram.com/{username}/"
     webbrowser.open(url)
-    sleep(8)
-    os.system("taskkill /F /IM msedge.exe")  # for windows
+    sleep(2)
+    #os.system("taskkill /F /IM msedge.exe")  # for windows
 
 # setup_non_follower
 non_follower = [word.strip() for word in non_follower]
